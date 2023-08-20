@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hexadecimal Encoder</title>
+</head>
+<body>
+    <h1>Hexadecimal Encoder</h1>
+    <textarea id="inputText" placeholder="Digite o texto aqui"></textarea>
+    <button onclick="encodeHexadecimal()">Codificar</button>
+    <h2>Texto Codificado em Hexadecimal:</h2>
+    <p id="encodedText"></p>
+
+    <script>
+        function encodeHexadecimal() {
+            const inputText = document.getElementById('inputText').value;
+            let encodedText = '';
+
+            for (let i = 0; i < inputText.length; i++) {
+                const charCode = inputText.charCodeAt(i);
+                const hexCode = charCode.toString(16).toUpperCase();
+                encodedText += hexCode + ' ';
+            }
+
+            document.getElementById('encodedText').textContent = encodedText;
+        }
+    </script>
+</body>
+</html>
+

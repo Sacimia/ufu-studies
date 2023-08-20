@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Octal Encoder</title>
+</head>
+<body>
+    <h1>Octal Encoder</h1>
+    <textarea id="inputText" placeholder="Digite o texto aqui"></textarea>
+    <button onclick="encodeOctal()">Codificar</button>
+    <h2>Texto Codificado em Octal:</h2>
+    <p id="encodedText"></p>
+
+    <script>
+        function encodeOctal() {
+            const inputText = document.getElementById('inputText').value;
+            let encodedText = '';
+
+            for (let i = 0; i < inputText.length; i++) {
+                const charCode = inputText.charCodeAt(i);
+                const octalCode = charCode.toString(8);
+                encodedText += octalCode + ' ';
+            }
+
+            document.getElementById('encodedText').textContent = encodedText;
+        }
+    </script>
+</body>
+</html>
