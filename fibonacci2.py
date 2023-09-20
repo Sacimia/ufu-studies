@@ -14,4 +14,6 @@ else:
         ultimo = termo
         count += 1
     print(F"O VALOR DE ENESIMO TERMO DA FUNÇAO DE FIBONACCI É {termo}")
+
+    #print("O VALOR DE ENESIMO TERMO DA FUNÇAO DE FIBONACCI É", termo)
 print("-"*50)
